@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#board {
+  border: 2px solid black;
+  position: relative;
+  background-color: rgb(34, 34, 34);
+}
+
+#car {
+  position: absolute;
+  background-image: url("./assets/playerCar-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

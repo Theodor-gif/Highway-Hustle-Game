@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./game.style.css" />
+    <title>Game</title>
+  </head>
+  <body id="body">
+    <section>
+      <h1>Game Title</h1>
+      <h3>Welcome to the Game title</h3>
+      <form id="registerForm">
+        <section>
+          <p>
+            Do you already have an account ? Log in
+            <button id="changeToRegister" type="button">here</button> .
+          </p>
+        </section>
+        <label for="userName">Name :</label>
+        <input id="userName" type="text" name="userName" placeholder="Name" />
+        <label for="lastName">lastName :</label>
+        <input
+          id="lastName"
+          type="text"
+          name="lastName"
+          placeholder="lastName"
+        />
+        <label for="email">Email :</label>
+        <input id="email" type="email" name="email" placeholder="Email" />
+        <label for="password">Password :</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+        <section>
+          <button type="reset">Reset</button>
+          <button type="submit">Register</button>
+        </section>
+      </form>
+      <form id="logInForm">
+        <section>
+          <p>
+            Don't have an account ? Register
+            <button id="changeToLog" type="button">here</button> .
+          </p>
+        </section>
+        <label for="email">Email :</label>
+        <input id="email" text="email" name="email" placeholder="Email" />
+        <label for="password">Password :</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+        <section>
+          <button type="reset">Reset</button>
+          <button type="submit">Log in</button>
+        </section>
+      </form>
+    </section>
+    <main id="board">
+      <div id="car"></div>
+    </main>
+    <script type="module" src="./game.script.js"></script>
+  </body>
+</html>
