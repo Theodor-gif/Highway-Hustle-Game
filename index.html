@@ -7,64 +7,122 @@
     <title>Highway Hustle Game</title>
   </head>
   <body id="body">
-    <section>
-      <h1>Highway Hustle</h1>
-      <h3>Welcome to the Highway Hustle</h3>
-      <form id="registerForm">
-        <section>
-          <p>
+    <!-- Register/Log in account -->
+    <section id="intro">
+      <h1 id="title">Highway Hustle</h1>
+      <h3 id="description">Welcome to the Highway Hustle</h3>
+      <!-- Register form -->
+      <form id="registerForm" class="formContainer">
+        <section class="formIntro">
+          <p class="questionAccount">
             Do you already have an account ? Log in
-            <button id="changeToRegister" type="button">here</button> .
+            <button id="changeToRegister" class="change" type="button">
+              here
+            </button>
+            .
           </p>
+          <p class="requiredSymbol"><span>*</span> Required fields</p>
         </section>
-        <label for="userName">Name :</label>
-        <input id="userName" type="text" name="userName" placeholder="Name" />
-        <label for="lastName">lastName :</label>
-        <input
-          id="lastName"
-          type="text"
-          name="lastName"
-          placeholder="lastName"
-        />
-        <label for="email">Email :</label>
-        <input id="email" type="email" name="email" placeholder="Email" />
-        <label for="password">Password :</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
-        <section>
-          <button type="reset">Reset</button>
-          <button type="submit">Register</button>
+        <div class="inputContainer">
+          <label for="userName" class="label">First name <span>*</span></label>
+          <input
+            id="userName"
+            class="input"
+            type="text"
+            name="userName"
+            placeholder="John"
+          />
+        </div>
+        <div class="inputContainer">
+          <label for="lastName" class="label">Surname <span>*</span></label>
+          <input
+            id="lastName"
+            class="input"
+            type="text"
+            name="lastName"
+            placeholder="Richard"
+          />
+        </div>
+        <div class="inputContainer">
+          <label for="email" class="label">Email <spna>*</spna></label>
+          <input
+            id="email"
+            class="input"
+            type="email"
+            name="email"
+            placeholder="email@gmail.com"
+          />
+        </div>
+        <div class="inputContainer">
+          <label for="password" class="label">Password <span>*</span></label>
+          <input
+            id="password"
+            class="input"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <div id="requiredContainer">
+          <p>
+            <span class="xLetter">X </span> Length between 10 and 40 characters.
+          </p>
+          <p>
+            <span class="xLetter">X </span>
+            At least one lowercase letter (az).
+          </p>
+          <p>
+            <span class="xLetter">X </span> At least one capital letter (AZ).
+          </p>
+          <p><span class="xLetter">X </span>At least one digit (0-9).</p>
+          <p><span class="xLetter">X </span> At least one special character:</p>
+          <p className="{style.regLastInfo}">-./',;&@#*)(_+:"~`</p>
+        </div>
+        <section class="buttonsContainer">
+          <button class="btn" type="reset">Reset</button>
+          <button class="btn" type="submit">Register</button>
         </section>
       </form>
-      <form id="logInForm">
-        <section>
-          <p>
+      <!-- Log in form -->
+      <form id="logInForm" class="formContainer">
+        <section class="formIntro">
+          <p class="questionAccount">
             Don't have an account ? Register
-            <button id="changeToLog" type="button">here</button> .
+            <button id="changeToLog" class="change" type="button">here</button>
+            .
           </p>
+          <p class="requiredSymbol"><span>*</span> Required fields</p>
         </section>
-        <label for="email">Email :</label>
-        <input id="email" text="email" name="email" placeholder="Email" />
-        <label for="password">Password :</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
-        <section>
-          <button type="reset">Reset</button>
-          <button type="submit">Log in</button>
+        <div class="inputContainer">
+          <label for="email" class="label">Email <span>*</span></label>
+          <input
+            id="email"
+            class="input"
+            text="email"
+            name="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="inputContainer">
+          <label for="password" class="label">Password <span>*</span></label>
+          <input
+            id="password"
+            class="input"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <section class="buttonsContainer">
+          <button class="btn" type="reset">Reset</button>
+          <button class="btn" type="submit">Log in</button>
         </section>
       </form>
     </section>
+    <!-- Game -->
     <main id="board">
       <div id="car"></div>
     </main>
-    <script type="module" src="./game.script.js"></script>
+    <script type="module" src="./js/game.script.js"></script>
   </body>
 </html>

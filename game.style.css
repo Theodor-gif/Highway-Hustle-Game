@@ -1,14 +1,24 @@
+:root {
+  --bg-primary: #159391; /* your teal background */
+  --text-light: #ffffff; /* main text on teal */
+  --accent: #f4c430; /* CTAs, highlights */
+  --surface: #f2f2f0; /* cards/panels on top of bg */
+  --text-dark: #0b2e2d; /* text on light surfaces */
+  --secondary: #e8674a; /* secondary buttons/links */
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Base style */
+
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: var(--bg-primary);
 }
 
 #board {
@@ -23,4 +33,127 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#intro {
+  margin-top: 150px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-light);
+}
+
+#description {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: var(--text-light);
+}
+
+/* form */
+
+.formContainer {
+  width: 90%;
+  margin: 50px auto 0 auto;
+  padding: 15px;
+  box-shadow: 20px 20px 30px #24484680;
+  background-color: var(--surface);
+  border-radius: 10px;
+  border: none;
+}
+
+.formIntro {
+  margin-top: 30px;
+}
+
+.questionAccount {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.change {
+  color: rgb(233, 17, 46);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.7s;
+  font-weight: 600;
+}
+
+.change:hover {
+  color: rgb(243, 160, 171);
+}
+
+.requiredSymbol {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: var(--text-dark);
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px 0 15px 0;
+}
+
+.input {
+  width: 50%;
+  border: none;
+  border-bottom: 2px solid var(--text-dark);
+  padding: 5px;
+  font-size: 0.9rem;
+  background-color: var(--surface);
+}
+
+/* Required Informacion container */
+
+#requiredContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 50px 0;
+}
+
+#requiredContainer > p:last-child {
+  padding-left: 15px;
+}
+
+.xLetter {
+  color: rgb(233, 17, 46);
+  font-weight: bolder;
+}
+
+/* Buttons container */
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0 50px 0;
+}
+
+.btn {
+  width: 100px;
+  padding: 7.5px 0;
+  font-size: 1rem;
+  border: none;
+  color: var(--text-dark);
+  background-color: var(--accent);
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.btn:hover {
+  background-color: #d4aa2e;
 }

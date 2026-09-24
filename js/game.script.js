@@ -13,7 +13,7 @@ const bodyElement = document.getElementById("body");
 
 // Default setup
 boardElement.style.display = "none";
-bodyElement.style.display = "inherit";
+bodyElement.style.display = "flex";
 logInForm.style.display = "none";
 
 // Display Log in form
