@@ -18,7 +18,12 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: var(--bg-primary);
+  /* background-color: var(--bg-primary); */
+  background-image: url("./assets/introBackground-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 #board {
@@ -61,7 +66,7 @@ body {
   width: 90%;
   margin: 50px auto 0 auto;
   padding: 15px;
-  box-shadow: 20px 20px 30px #24484680;
+  box-shadow: 20px 20px 30px #327f7b80;
   background-color: var(--surface);
   border-radius: 10px;
   border: none;
@@ -126,12 +131,16 @@ body {
 }
 
 #requiredContainer > p:last-child {
-  padding-left: 15px;
+  padding-left: 27.5px;
 }
 
 .xLetter {
-  color: rgb(233, 17, 46);
-  font-weight: bolder;
+  margin-right: 10px;
+}
+
+.xLetter > img {
+  width: 15px;
+  height: 15px;
 }
 
 /* Buttons container */

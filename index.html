@@ -25,57 +25,86 @@
         </section>
         <div class="inputContainer">
           <label for="userName" class="label">First name <span>*</span></label>
-          <input
-            id="userName"
-            class="input"
-            type="text"
-            name="userName"
-            placeholder="John"
-          />
+          <div>
+            <input
+              id="userName"
+              class="input"
+              type="text"
+              name="userName"
+              placeholder="John"
+            /><span><img src="./assets/correct-image.png" width="15" /></span
+            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+          </div>
         </div>
         <div class="inputContainer">
           <label for="lastName" class="label">Surname <span>*</span></label>
-          <input
-            id="lastName"
-            class="input"
-            type="text"
-            name="lastName"
-            placeholder="Richard"
-          />
+          <div>
+            <input
+              id="lastName"
+              class="input"
+              type="text"
+              name="lastName"
+              placeholder="Richard"
+            /><span><img src="./assets/correct-image.png" width="15" /></span
+            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+          </div>
         </div>
         <div class="inputContainer">
           <label for="email" class="label">Email <spna>*</spna></label>
-          <input
-            id="email"
-            class="input"
-            type="email"
-            name="email"
-            placeholder="email@gmail.com"
-          />
+          <div>
+            <input
+              id="email"
+              class="input"
+              type="email"
+              name="email"
+              placeholder="email@gmail.com"
+            /><span><img src="./assets/correct-image.png" width="15" /></span
+            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+          </div>
         </div>
         <div class="inputContainer">
           <label for="password" class="label">Password <span>*</span></label>
-          <input
-            id="password"
-            class="input"
-            type="password"
-            name="password"
-            placeholder="Password"
-          />
+          <div>
+            <input
+              id="password"
+              class="input"
+              type="password"
+              name="password"
+              placeholder="Password"
+            /><span><img src="./assets/correct-image.png" width="15" /></span
+            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+          </div>
         </div>
         <div id="requiredContainer">
           <p>
-            <span class="xLetter">X </span> Length between 10 and 40 characters.
+            <span class="xLetter"
+              ><img src="./assets/attention-image.png" />
+            </span>
+            Length between 10 and 40 characters.
           </p>
           <p>
-            <span class="xLetter">X </span>
+            <span class="xLetter"
+              ><img src="./assets/attention-image.png"
+            /></span>
             At least one lowercase letter (az).
           </p>
           <p>
-            <span class="xLetter">X </span> At least one capital letter (AZ).
+            <span class="xLetter"
+              ><img src="./assets/attention-image.png"
+            /></span>
+            At least one capital letter (AZ).
           </p>
-          <p><span class="xLetter">X </span>At least one digit (0-9).</p>
-          <p><span class="xLetter">X </span> At least one special character:</p>
+          <p>
+            <span class="xLetter"
+              ><img src="./assets/attention-image.png" /></span
+            >At least one digit (0-9).
+          </p>
+          <p>
+            <span class="xLetter"
+              ><img src="./assets/attention-image.png"
+            /></span>
+            At least one special character:
+          </p>
           <p className="{style.regLastInfo}">-./',;&@#*)(_+:"~`</p>
         </div>
         <section class="buttonsContainer">
