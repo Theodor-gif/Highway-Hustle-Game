@@ -32,8 +32,11 @@
               type="text"
               name="userName"
               placeholder="John"
-            /><span><img src="./assets/correct-image.png" width="15" /></span
-            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+            /><span id="correctName"
+              ><img src="./assets/correct-image.png" width="15" /></span
+            ><span id="wrongName"
+              ><img src="./assets/wrong-image.png" width="15"
+            /></span>
           </div>
         </div>
         <div class="inputContainer">
@@ -45,8 +48,11 @@
               type="text"
               name="lastName"
               placeholder="Richard"
-            /><span><img src="./assets/correct-image.png" width="15" /></span
-            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+            /><span id="correctSurname"
+              ><img src="./assets/correct-image.png" width="15" /></span
+            ><span id="wrongSurname"
+              ><img src="./assets/wrong-image.png" width="15"
+            /></span>
           </div>
         </div>
         <div class="inputContainer">
@@ -58,8 +64,11 @@
               type="email"
               name="email"
               placeholder="email@gmail.com"
-            /><span><img src="./assets/correct-image.png" width="15" /></span
-            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+            /><span id="correctEmail"
+              ><img src="./assets/correct-image.png" width="15" /></span
+            ><span id="wrongEmail"
+              ><img src="./assets/wrong-image.png" width="15"
+            /></span>
           </div>
         </div>
         <div class="inputContainer">
@@ -71,8 +80,19 @@
               type="password"
               name="password"
               placeholder="Password"
-            /><span><img src="./assets/correct-image.png" width="15" /></span
-            ><span><img src="./assets/wrong-image.png" width="15" /></span>
+            />
+            <button id="visualBtnPass">
+              <img
+                id="passSee"
+                src="./assets/notSee-image.png"
+                width="15"
+              /><img id="passNotSee" src="./assets/see-image.png" width="15" />
+            </button>
+            <span id="correctPassword"
+              ><img src="./assets/correct-image.png" width="15" /></span
+            ><span id="wrongPassword"
+              ><img src="./assets/wrong-image.png" width="15"
+            /></span>
           </div>
         </div>
         <div id="requiredContainer">
@@ -80,7 +100,7 @@
             <span class="xLetter"
               ><img src="./assets/attention-image.png" />
             </span>
-            Length between 10 and 40 characters.
+            Length between 5 and 40 characters.
           </p>
           <p>
             <span class="xLetter"
@@ -105,7 +125,7 @@
             /></span>
             At least one special character:
           </p>
-          <p className="{style.regLastInfo}">-./',;&@#*)(_+:"~`</p>
+          <p className="{style.regLastInfo}">-./',;&@#*)!(_+:"~`</p>
         </div>
         <section class="buttonsContainer">
           <button class="btn" type="reset">Reset</button>
