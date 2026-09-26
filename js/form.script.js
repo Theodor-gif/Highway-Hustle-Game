@@ -222,13 +222,12 @@ logInForm.addEventListener("submit", async (e) => {
       intro.style.display = "none";
       gameMenu.style.display = "flex";
       game.style.display = "flex";
-      bodyElement.style.cssText = `
-        background-image: url("/Highway-Hustle-Game/assets/game-background-image.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-      `;
+      bodyElement.style.backgroundImage =
+        'url("/Highway-Hustle-Game/assets/game-background-image.jpg")';
+      bodyElement.style.backgroundSize = "cover";
+      bodyElement.style.backgroundPosition = "center";
+      bodyElement.style.backgroundRepeat = "no-repeat";
+      bodyElement.style.height = "100vh";
       console.log("Logged in!!", data);
     } else {
       console.log("Failed to log in", data.message);
