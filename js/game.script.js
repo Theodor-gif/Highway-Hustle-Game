@@ -146,14 +146,17 @@ async function showFinalStats() {
 
 async function sendScore() {
   try {
-    const response = await fetch(`${API_URL}/score/add`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+    const response = await fetch(
+      "https://highway-hustle-game-server.onrender.com/score/add",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({ score }),
       },
-      body: JSON.stringify({ score }),
-    });
+    );
 
     const data = await response.json();
 
@@ -171,7 +174,9 @@ async function sendScore() {
 
 async function showRank() {
   try {
-    const response = await fetch(`${API_URL}/score/scores`);
+    const response = await fetch(
+      "https://highway-hustle-game-server.onrender.com/score/scores",
+    );
     const allScores = await response.json();
 
     const userId = localStorage.getItem("userId");

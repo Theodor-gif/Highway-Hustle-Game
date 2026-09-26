@@ -1,6 +1,6 @@
 "use strict";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://highway-hustle-game-server.onrender.com";
 
 const registerForm = document.getElementById("registerForm");
 const logInForm = document.getElementById("logInForm");
