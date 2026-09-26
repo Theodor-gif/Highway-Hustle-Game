@@ -223,7 +223,7 @@ logInForm.addEventListener("submit", async (e) => {
       gameMenu.style.display = "flex";
       game.style.display = "flex";
       bodyElement.style.cssText = `
-        background-image: url("/assets/game-background-image.jpg");
+        background-image: url("/Highway-Hustle-Game/assets/game-background-image.jpg"");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
