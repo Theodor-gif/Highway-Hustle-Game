@@ -32,9 +32,9 @@
               type="text"
               name="userName"
               placeholder="John"
-            /><span id="correctName"
+            /><span id="correctName" class="checkMark"
               ><img src="./assets/correct-image.png" width="15" /></span
-            ><span id="wrongName"
+            ><span id="wrongName" class="checkMark"
               ><img src="./assets/wrong-image.png" width="15"
             /></span>
           </div>
@@ -48,9 +48,9 @@
               type="text"
               name="lastName"
               placeholder="Richard"
-            /><span id="correctSurname"
+            /><span id="correctSurname" class="checkMark"
               ><img src="./assets/correct-image.png" width="15" /></span
-            ><span id="wrongSurname"
+            ><span id="wrongSurname" class="checkMark"
               ><img src="./assets/wrong-image.png" width="15"
             /></span>
           </div>
@@ -64,9 +64,9 @@
               type="email"
               name="email"
               placeholder="email@gmail.com"
-            /><span id="correctEmail"
+            /><span id="correctEmail" class="checkMark"
               ><img src="./assets/correct-image.png" width="15" /></span
-            ><span id="wrongEmail"
+            ><span id="wrongEmail" class="checkMark"
               ><img src="./assets/wrong-image.png" width="15"
             /></span>
           </div>
@@ -88,9 +88,9 @@
                 width="15"
               /><img id="passNotSee" src="./assets/see-image.png" width="15" />
             </button>
-            <span id="correctPassword"
+            <span id="correctPassword" class="checkMark"
               ><img src="./assets/correct-image.png" width="15" /></span
-            ><span id="wrongPassword"
+            ><span id="wrongPassword" class="checkMark"
               ><img src="./assets/wrong-image.png" width="15"
             /></span>
           </div>
@@ -169,9 +169,40 @@
       </form>
     </section>
     <!-- Game -->
-    <main id="board">
-      <div id="car"></div>
-    </main>
+    <!-- Menu -->
+    <seciton id="gameMenu">
+      <h1 id="welcomeTitle">Welcome to Highway Hustle!</h1>
+      <p id="introTextOne">
+        Buckle up! Choose your ride and hit the road. Dodge the oncoming
+        traffic, survive as long as you can, and rack up points for every car
+        you avoid. The longer you last, the higher your score climbs — how far
+        can you go?
+      </p>
+      <h3 id="introPlayTitle">How to Play</h3>
+      <p id="introTextTwo">
+        Use ← → to move left and right, and ↑ ↓ to move up and down. Avoid the
+        cars coming toward you — one hit and it's game over. The more cars you
+        dodge, the more points you score!
+      </p>
+      <h2 id="textDecission">Choose Your Car</h2>
+      <div id="optionsContainer">
+        <button id="optionOne" type="button"></button>
+        <button id="optionTwo" type="button"></button>
+      </div>
+      <button id="startGame" type="button">START</button>
+    </seciton>
+    <!-- Game board -->
+    <section id="game">
+      <div id="gameInfoBoard">
+        <h2 class="gameInfo">Lives : <span>❤️❤️❤️</span></h2>
+        <h2 class="gameInfo">Score : <span>0</span></h2>
+      </div>
+      <main id="board">
+        <img id="garageDoor" src="./assets/gate-image.png" />
+        <div id="car"></div>
+      </main>
+    </section>
+
     <script src="./js/form.script.js"></script>
     <script type="module" src="./js/game.script.js"></script>
   </body>

@@ -6,69 +6,47 @@ export class Car {
     this.positionY = positionY;
     this.element = element;
     this.board = board;
+    this.canMove = false;
 
     this.updatePosition();
+    this.bindControls(); // set up listener ONCE, here
   }
+
   updatePosition() {
     this.element.style.width = this.width + "px";
     this.element.style.height = this.height + "px";
     this.element.style.top = this.positionY + "px";
     this.element.style.left = this.positionX + "px";
   }
-  drive() {
+
+  bindControls() {
     document.addEventListener("keydown", (e) => {
       const key = e.key;
-      if (key === "ArrowUp") {
-        if (this.collisionTop()) {
-          this.positionY -= 0;
-        } else {
-          this.positionY -= 5;
-        }
-      } else if (key === "ArrowDown") {
-        if (this.collisionBottom()) {
-          this.positionY += 0;
-        } else {
-          this.positionY += 5;
-        }
-      } else if (key === "ArrowLeft") {
-        if (this.collisionLeft()) {
-          this.positionX -= 0;
-        } else {
-          this.positionX -= 5;
-        }
-      } else if (key === "ArrowRight") {
-        if (this.collisionRight()) {
-          this.positionX += 0;
-        } else {
-          this.positionX += 5;
-        }
+      if (!this.canMove) return;
+      if (key === "ArrowUp" && !this.collisionTop()) {
+        this.positionY -= 5;
+      } else if (key === "ArrowDown" && !this.collisionBottom()) {
+        this.positionY += 5;
+      } else if (key === "ArrowLeft" && !this.collisionLeft()) {
+        this.positionX -= 5;
+      } else if (key === "ArrowRight" && !this.collisionRight()) {
+        this.positionX += 5;
       }
 
       this.updatePosition();
     });
   }
+
   collisionLeft() {
-    if (this.positionX === 0) {
-      return true;
-    }
-    return false;
+    return this.positionX <= 0;
   }
   collisionRight() {
-    if (this.positionX + this.width >= this.board.width) {
-      return true;
-    }
-    return false;
+    return this.positionX + this.width >= this.board.width;
   }
   collisionTop() {
-    if (this.positionY === 0) {
-      return true;
-    }
-    return false;
+    return this.positionY <= 0;
   }
   collisionBottom() {
-    if (this.positionY + this.height + 5 > this.board.height) {
-      return true;
-    }
-    return false;
+    return this.positionY + this.height + 5 > this.board.height;
   }
 }

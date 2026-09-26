@@ -26,23 +26,10 @@ body {
   height: 100vh;
 }
 
-#board {
-  border: 2px solid black;
-  position: relative;
-  background-color: rgb(34, 34, 34);
-}
-
-#car {
-  position: absolute;
-  background-image: url("./assets/playerCar-image.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 #intro {
   margin-top: 150px;
   width: 500px;
+  /* Here change the display to flex */
   display: flex;
   flex-direction: column;
 }
@@ -121,6 +108,15 @@ body {
   background-color: var(--surface);
 }
 
+.checkMark {
+  margin-left: 10px;
+}
+
+#visualBtnPass {
+  border: none;
+  cursor: pointer;
+}
+
 /* Required Informacion container */
 
 #requiredContainer {
@@ -165,4 +161,148 @@ body {
 
 .btn:hover {
   background-color: #d4aa2e;
+}
+
+/* Game */
+
+/* Menu */
+
+#gameMenu {
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  z-index: 4;
+  background-color: #e8674a80;
+  top: 200px;
+  /* Change to flex to see the game */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#garageDoor {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#welcomeTitle {
+  margin-top: 40px;
+  font-size: 1.7rem;
+}
+
+#introTextOne {
+  width: 80%;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  color: white;
+}
+
+#introPlayTitle {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+#introTextTwo {
+  width: 80%;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  color: white;
+}
+
+#textDecission {
+  margin: 30px 0 10px 0;
+  font-size: 1.4rem;
+}
+
+#optionsContainer {
+  height: 20%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#optionOne {
+  background-image: url("./assets/playerCar1-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#optionTwo {
+  background-image: url("./assets/playerCar2-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#startGame {
+  width: 80px;
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--accent);
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Main game */
+
+#game {
+  width: 60vh;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameInfoBoard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameInfo {
+  font-size: 1.8rem;
+  color: white;
+}
+
+#garageDoor {
+  transition: bottom 1s ease-in-out;
+}
+
+#board {
+  border: 2px solid black;
+  position: relative;
+  background-color: rgb(34, 34, 34);
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+#car {
+  position: absolute;
+  background-image: url("./assets/playerCar1-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
 }

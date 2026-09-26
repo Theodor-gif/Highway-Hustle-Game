@@ -7,7 +7,6 @@ const registerForm = document.getElementById("registerForm");
 const logInForm = document.getElementById("logInForm");
 const changeToRegister = document.getElementById("changeToRegister");
 const changeToLog = document.getElementById("changeToLog");
-const boardElement = document.getElementById("board");
 const playerElement = document.getElementById("car");
 const bodyElement = document.getElementById("body");
 const logInSubmit = document.getElementById("logInForm");
@@ -27,9 +26,12 @@ const wrongPassword = document.getElementById("wrongPassword");
 const passSeeImage = document.getElementById("passSee");
 const passNotSeeImage = document.getElementById("passNotSee");
 const passVisualBtn = document.getElementById("visualBtnPass");
+const game = document.getElementById("game");
+const gameMenu = document.getElementById("gameMenu");
 
 // Default setup
-boardElement.style.display = "none";
+gameMenu.style.display = "none";
+game.style.display = "none";
 bodyElement.style.display = "flex";
 logInForm.style.display = "none";
 correctName.style.display = "none";
@@ -215,8 +217,13 @@ logInSubmit.addEventListener("submit", async (e) => {
 
     if (response.ok && data.token) {
       localStorage.setItem("token", data.token);
+      clearInterval(inputName);
+      clearInterval(inputSurname);
+      clearInterval(inputEmail);
+      clearInterval(inputPassword);
       intro.style.display = "none";
-      boardElement.style.display = "inline-block";
+      gameMenu.style.display = "flex";
+      game.style.display = "flex";
       bodyElement.style.cssText = `
         background-image: url("../assets/game-background-image.jpg");
         background-size: cover;
