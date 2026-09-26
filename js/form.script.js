@@ -2,14 +2,11 @@
 
 const API_URL = "http://localhost:3000";
 
-const registerSubmit = document.getElementById("registerForm");
 const registerForm = document.getElementById("registerForm");
 const logInForm = document.getElementById("logInForm");
 const changeToRegister = document.getElementById("changeToRegister");
 const changeToLog = document.getElementById("changeToLog");
-const playerElement = document.getElementById("car");
 const bodyElement = document.getElementById("body");
-const logInSubmit = document.getElementById("logInForm");
 const intro = document.getElementById("intro");
 const firstName = document.getElementById("userName");
 const surName = document.getElementById("lastName");
@@ -89,7 +86,7 @@ const inputEmail = setInterval(() => {
 // Check the Password input visual
 const inputPassword = setInterval(() => {
   const input =
-    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/.test(
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(
       password.value,
     );
   if (input) {
@@ -116,7 +113,7 @@ passVisualBtn.addEventListener("click", (e) => {
 
 // Register function
 
-registerSubmit.addEventListener("submit", async (e) => {
+registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const name = firstName.value;
@@ -125,7 +122,7 @@ registerSubmit.addEventListener("submit", async (e) => {
   const passwordAdd = password.value;
   const inputEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(emailAdd);
   const inputPassword =
-    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/.test(
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(
       passwordAdd,
     );
 
@@ -195,7 +192,7 @@ registerSubmit.addEventListener("submit", async (e) => {
 
 // Log in function
 
-logInSubmit.addEventListener("submit", async (e) => {
+logInForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const emailLog = document.getElementById("emailLog").value;
@@ -217,6 +214,7 @@ logInSubmit.addEventListener("submit", async (e) => {
 
     if (response.ok && data.token) {
       localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data.user._id);
       clearInterval(inputName);
       clearInterval(inputSurname);
       clearInterval(inputEmail);

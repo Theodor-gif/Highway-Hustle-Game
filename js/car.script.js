@@ -24,13 +24,13 @@ export class Car {
       const key = e.key;
       if (!this.canMove) return;
       if (key === "ArrowUp" && !this.collisionTop()) {
-        this.positionY -= 5;
+        this.positionY -= 10;
       } else if (key === "ArrowDown" && !this.collisionBottom()) {
-        this.positionY += 5;
+        this.positionY += 10;
       } else if (key === "ArrowLeft" && !this.collisionLeft()) {
-        this.positionX -= 5;
+        this.positionX -= 10;
       } else if (key === "ArrowRight" && !this.collisionRight()) {
-        this.positionX += 5;
+        this.positionX += 10;
       }
 
       this.updatePosition();

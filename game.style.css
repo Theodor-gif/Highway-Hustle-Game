@@ -187,6 +187,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  transition: bottom 1s ease-in-out;
 }
 
 #welcomeTitle {
@@ -252,6 +253,12 @@ body {
   cursor: pointer;
 }
 
+#optionsContainer button.selected {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 #startGame {
   width: 80px;
   height: 30px;
@@ -286,10 +293,6 @@ body {
   color: white;
 }
 
-#garageDoor {
-  transition: bottom 1s ease-in-out;
-}
-
 #board {
   border: 2px solid black;
   position: relative;
@@ -305,4 +308,78 @@ body {
   background-position: center;
   background-size: cover;
   z-index: 1;
+}
+
+#car.car-one {
+  background-image: url("./assets/playerCar1-image.png");
+}
+
+#car.car-two {
+  background-image: url("./assets/playerCar2-image.png");
+}
+
+.enemy-car {
+  background-image: url("./assets/enemyCar1-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Game over */
+
+#gameOverScreen {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(11, 46, 45, 0.85);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  /* JS switches this to "flex" when the game ends */
+}
+
+#gameOverCard {
+  background-color: var(--surface);
+  color: var(--text-dark);
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 20px 20px 30px #327f7b80;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  min-width: 280px;
+}
+
+#gameOverCard h1 {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+#gameOverCard p {
+  font-size: 1.2rem;
+}
+
+#gameOverCard span {
+  font-weight: bold;
+  color: var(--bg-primary);
+}
+
+#restartBtn {
+  margin-top: 10px;
+  width: 140px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#restartBtn:hover {
+  background-color: #d4aa2e;
 }

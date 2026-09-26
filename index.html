@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="inputContainer">
-          <label for="email" class="label">Email <spna>*</spna></label>
+          <label for="email" class="label">Email <span>*</span></label>
           <div>
             <input
               id="email"
@@ -81,7 +81,7 @@
               name="password"
               placeholder="Password"
             />
-            <button id="visualBtnPass">
+            <button id="visualBtnPass" type="button">
               <img
                 id="passSee"
                 src="./assets/notSee-image.png"
@@ -147,7 +147,7 @@
           <input
             id="emailLog"
             class="input"
-            text="email"
+            type="email"
             name="email"
             placeholder="Email"
           />
@@ -170,7 +170,7 @@
     </section>
     <!-- Game -->
     <!-- Menu -->
-    <seciton id="gameMenu">
+    <section id="gameMenu">
       <h1 id="welcomeTitle">Welcome to Highway Hustle!</h1>
       <p id="introTextOne">
         Buckle up! Choose your ride and hit the road. Dodge the oncoming
@@ -190,19 +190,27 @@
         <button id="optionTwo" type="button"></button>
       </div>
       <button id="startGame" type="button">START</button>
-    </seciton>
+    </section>
     <!-- Game board -->
     <section id="game">
       <div id="gameInfoBoard">
-        <h2 class="gameInfo">Lives : <span>❤️❤️❤️</span></h2>
-        <h2 class="gameInfo">Score : <span>0</span></h2>
+        <h2 class="gameInfo">Lives : <span id="livesDisplay">❤️❤️❤️</span></h2>
+        <h2 class="gameInfo">Score : <span id="scoreDisplay">0</span></h2>
       </div>
       <main id="board">
         <img id="garageDoor" src="./assets/gate-image.png" />
         <div id="car"></div>
       </main>
     </section>
-
+    <!-- Game over -->
+    <section id="gameOverScreen" style="display: none">
+      <div id="gameOverCard">
+        <h1>Game Over</h1>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <p>Your rank: <span id="finalRank">-</span></p>
+        <button id="restartBtn" type="button">Restart</button>
+      </div>
+    </section>
     <script src="./js/form.script.js"></script>
     <script type="module" src="./js/game.script.js"></script>
   </body>
